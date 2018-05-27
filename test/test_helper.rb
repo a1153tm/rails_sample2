@@ -9,4 +9,8 @@ class ActiveSupport::TestCase
 
   include ApplicationHelper
 
+  def is_logged_in?
+    not session[:user_id].nil?
+  end
+
 end
